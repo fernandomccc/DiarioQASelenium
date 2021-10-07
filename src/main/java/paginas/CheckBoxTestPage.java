@@ -12,10 +12,11 @@ public class CheckBoxTestPage {
         this.navegador = navegador;
 
     }
-
     public CheckBoxTestPage  marcandoCheckBoxSimples() {
-
+        navegador.findElement(By.linkText("Input Forms")).click();
+        navegador.findElement(By.linkText("Checkbox Demo")).click();
         navegador.findElement(By.id("isAgeSelected")).click();
+
         String msg = navegador.findElement(By.cssSelector("div[id='txtAge']")).getText();
         Assertions.assertEquals("Success - Check box is checked",msg);
 
@@ -23,6 +24,8 @@ public class CheckBoxTestPage {
     }
 
     public CheckBoxTestPage marcandoCheckBoxiesMultiplas(){
+        navegador.findElement(By.linkText("Input Forms")).click();
+        navegador.findElement(By.linkText("Checkbox Demo")).click();
         navegador.findElement(By.id("check1")).click();
 
         return this;

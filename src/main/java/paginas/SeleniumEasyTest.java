@@ -30,39 +30,61 @@ public class SeleniumEasyTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("inputFieldTest")
     public void inputFieldTest(){
         new SimpleFormPage(navegador)
                 .informarMensagem("Eu vou aprender de todo jeito!");
     }
-
     @Test
-    @DisplayName("SEila,depois eu vejo")
+    @DisplayName("SomaInteirosTest")
     public  void somaInteirosTest(){
         new SimpleFormPage(navegador)
                 .somaInteiros("81", "19");
-
     }
     @Test
-    @DisplayName("RadioButtons Test")
-    public void marcarRadioButton(){
+    @DisplayName("RadioButtonsTestMale")
+    public void marcarRadioButtonMale(){
         new RadioButtonsTestPage(navegador)
-                .testarRadioButtonSimples();
-
+                .testarRadioButtonSimplesMale();
     }
 
-    //.testarPaginaRadioButtonsTestPage()
-                //.testarRadioButtonSimples();
+    @Test
+    @DisplayName("RadioButtonsTestFemale")
+    public void marcarRadioButtonFemale(){
+        new RadioButtonsTestPage(navegador)
+                .testarRadioButtonSimplesFemale();
+    }
 
-
-
-                /*.testarPaginaCheckBox()
+    @Test
+    @DisplayName("CheckBoxTestSimples")
+        public void marcandoCheckBoxSimplesMale() {
+        new CheckBoxTestPage(navegador)
                 .marcandoCheckBoxSimples()
-                .marcandoCheckBoxiesMultiplas();*/
+                .marcandoCheckBoxiesMultiplas();
+    }
+
+    @Test
+    @DisplayName("CheckBoxTestMultiplas")
+    public void marcandoCheckBoxiesMultiplas() {
+        new CheckBoxTestPage(navegador)
+                .marcandoCheckBoxiesMultiplas();
+    }
+
+    @Test
+    @DisplayName("radioButtonMale0to5")
+    public void radioButtonTest() {
+        new RadioButtonsTestPage(navegador)
+                .radioButtonMale("Male","0 - 5")
+                .radioButtonMale("Male","5 - 15")
+                .radioButtonMale("Male","15 - 50")
+                .radioButtonMale("Female","0 - 5")
+                .radioButtonMale("Female","5 - 15")
+                .radioButtonMale("Female","15 - 50");
+    }
 
     @AfterEach
     public void AfterEach(){
-        //navegador.quit();
+        navegador.quit();
     }
 }
 

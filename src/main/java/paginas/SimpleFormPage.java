@@ -47,21 +47,4 @@ public class SimpleFormPage {
         return this;
     }
 
-    public RadioButtonsTestPage testarPaginaRadioButtonsTestPage() {
-        navegador.findElement(By.linkText("Input Forms")).click();
-        navegador.findElement(By.linkText("Radio Buttons Demo")).click();
-
-        return new RadioButtonsTestPage(navegador);
-    }
-
-
-    /*   public CheckBoxTestPage testarPaginaCheckBox(){
-        navegador.findElement(By.linkText("Input Forms")).click();
-        navegador.findElement(By.linkText("Checkbox Demo")).click();
-
-        return new CheckBoxTestPage(navegador);
-
-    }*/
-
-
 }
