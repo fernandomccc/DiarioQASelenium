@@ -30,6 +30,9 @@ public class SimpleFormPage {
 
     }
     public SimpleFormPage somaInteiros(String a, String b){
+        navegador.findElement(By.linkText("Input Forms")).click();
+        navegador.findElement(By.linkText("Simple Form Demo")).click();
+
         navegador.findElement(By.id("sum1")).click();
         navegador.findElement(By.id("sum1")).sendKeys(a);
 

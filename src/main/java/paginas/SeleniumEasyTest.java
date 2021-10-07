@@ -30,20 +30,35 @@ public class SeleniumEasyTest {
     }
 
     @Test
-    @DisplayName("Input Field")
-    public void InputFieldTest() throws InterruptedException {
+    @DisplayName("")
+    public void inputFieldTest(){
         new SimpleFormPage(navegador)
-                .informarMensagem("Eu vou aprender de todo jeito!")
-                .somaInteiros("81","19")
-                .testarPaginaRadioButtonsTestPage()
+                .informarMensagem("Eu vou aprender de todo jeito!");
+    }
+
+    @Test
+    @DisplayName("SEila,depois eu vejo")
+    public  void somaInteirosTest(){
+        new SimpleFormPage(navegador)
+                .somaInteiros("81", "19");
+
+    }
+    @Test
+    @DisplayName("RadioButtons Test")
+    public void marcarRadioButton(){
+        new RadioButtonsTestPage(navegador)
                 .testarRadioButtonSimples();
+
+    }
+
+    //.testarPaginaRadioButtonsTestPage()
+                //.testarRadioButtonSimples();
 
 
 
                 /*.testarPaginaCheckBox()
                 .marcandoCheckBoxSimples()
                 .marcandoCheckBoxiesMultiplas();*/
-    }
 
     @AfterEach
     public void AfterEach(){
