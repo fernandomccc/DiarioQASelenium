@@ -43,17 +43,18 @@ public class SeleniumEasyTest {
     }
     @Test
     @DisplayName("RadioButtonsTestMale")
-    public void marcarRadioButtonMale(){
+    public void marcarRadioButtonSimplesTest(){
         new RadioButtonsTestPage(navegador)
-                .testarRadioButtonSimplesMale();
+                .testarRadioButtonSimples("Male")
+                .testarRadioButtonSimples("Female");
     }
 
-    @Test
+  /*  @Test
     @DisplayName("RadioButtonsTestFemale")
     public void marcarRadioButtonFemale(){
         new RadioButtonsTestPage(navegador)
                 .testarRadioButtonSimplesFemale();
-    }
+    }*/
 
     @Test
     @DisplayName("CheckBoxTestSimples")
